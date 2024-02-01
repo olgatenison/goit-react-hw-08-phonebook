@@ -8,7 +8,7 @@ import Home from './PhoneBook/Refactor/home';
 import { useSelector } from 'react-redux';
 
 const PrivateRoute = ({ element, redirectTo }) => {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
   return isAuthenticated ? (
     <>{element}</>
@@ -18,18 +18,37 @@ const PrivateRoute = ({ element, redirectTo }) => {
 };
 
 export const App = () => {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
   return (
-    <div style={{  height: '100%', }}>
+    <div>
       <Navigation />
-      <div style={{ display: 'flex', justifyContent: 'center', color: 'fff'}}>
+      <div>
         <Routes>
-          <Route path="/" element={isAuthenticated ? <Navigate to="/contacts" /> : <Home />} />
-          <Route path="/register" element={isAuthenticated ? <Navigate to="/contacts" /> : <Register />} />
-          <Route path="/login" element={isAuthenticated ? <Navigate to="/contacts" /> : <Login />} />
-          <Route path="/contacts" element={<PrivateRoute element={<Phonebook />} redirectTo="/login" />} />
-          <Route path="*" element={<Navigate to={isAuthenticated ? '/contacts' : '/'} />} />
+          <Route
+            path="/"
+            element={isAuthenticated ? <Navigate to="/contacts" /> : <Home />}
+          />
+          <Route
+            path="/register"
+            element={
+              isAuthenticated ? <Navigate to="/contacts" /> : <Register />
+            }
+          />
+          <Route
+            path="/login"
+            element={isAuthenticated ? <Navigate to="/contacts" /> : <Login />}
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute element={<Phonebook />} redirectTo="/login" />
+            }
+          />
+          <Route
+            path="*"
+            element={<Navigate to={isAuthenticated ? '/contacts' : '/'} />}
+          />
         </Routes>
       </div>
     </div>
