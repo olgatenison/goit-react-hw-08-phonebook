@@ -1,141 +1,92 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-
+  font-family: 'Roboto', sans-serif;
   width: 100%;
   color: #ffdf2c;
 }
-
 .container {
-  width: 100%;
+  max-width: 350px;
   margin: 0 auto;
-  display: flex;
-  margin-top: 30px;
-  flex-direction: column;
+  display: block;
+  padding: 40px;
 }
-h1 {
-  margin-right: auto;
-  font-size: 66px;
-  font-style: italic;
-  color: #c3ccd1;
-}
-
-h2 {
-  margin-right: auto;
-  font-style: italic;
-  font-size: 48px;
-  color: #afbdc7;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  border: 2px solid #3498db;
-  padding: 60px;
-  border-radius: 35px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease-in-out;
-  background: rgb(199, 251, 63);
-  background: radial-gradient(
-    circle,
-    rgba(199, 251, 63, 0.2945553221288515) 0%,
-    rgba(64, 177, 245, 0.22452731092436973) 100%
-  );
-  gap: 20px;
-}
-
-form:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-}
-
-label {
-  margin-bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  color: #eef7fc;
-}
-
-input {
-  padding: 16px;
-  margin-bottom: 24px;
-  font-size: 18px;
-  border: 1px solid #3498db;
-  color: aqua;
-  border-radius: 5px;
-  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-input:focus {
-  border-color: #3498db;
-  background-color: #18b960;
-}
-
-button {
-  padding: 16px;
-  font-size: 18px;
-  background: rgb(199, 251, 63);
-  background: radial-gradient(
-    circle,
-    rgba(199, 251, 63, 0.5) 0%,
-    rgba(64, 177, 245, 0.5) 100%
-  );
-  color: #ffd4d4;
-  border: none;
-  border-radius: 32px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-ul {
-  list-style: square;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 12px;
+.title {
+  font-family: 'Roboto';
   font-size: 24px;
-  padding-bottom: 8px;
-  transition: background-color 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 10px;
-  border-radius: 10px;
-  color: #c3ccd1;
-}
-
-li:last-child {
-  border-bottom: none;
-}
-
-.deleteButton {
-  margin-left: 20px;
-  border-radius: 32px;
-}
-
-.logaut {
-  width: 300px;
-  background: rgb(34, 105, 195);
-  background: linear-gradient(
-    0deg,
-    rgba(34, 105, 195, 0.8) 0%,
-    rgba(45, 253, 121, 0.8) 100%
-  );
-  margin: auto;
-  border-radius: 35px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
   text-align: center;
-  color: #d4eaf5;
+  color: #000;
 }
-.homecontainer {
-  background-color: #18b960;
+label {
+  font-size: 18px;
+  padding-bottom: 10px;
+  color: #f7f7f7;
 }
-.hometext {
-  background-color: #18b960;
+input {
+  display: block;
+  margin-bottom: 20px;
 }
-.Home {
-  background-color: #18b960;
+.input {
+  display: block;
+  width: 350px;
+  height: 30px;
+  border: 0;
+
+  border-radius: 6px;
+}
+.btn {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 400px;
+}
+
+.btn:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.btn:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.btn:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.wrapper {
+  background-color: rgb(255, 166, 0);
+  border-radius: 20px;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
